@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+import Home from './Home';
+
 export default function App() {
   const [data, setData] = useState([]);
   async function getData() {
@@ -19,6 +21,9 @@ export default function App() {
 
   return (
     <>
+      <main className='m-8'>
+        <Home data={data} />
+      </main>
     </>
   );
 }
